@@ -1,0 +1,112 @@
+* {
+    font-family: 'Karla';
+    max-width: 1440px;
+    max-height: 800px;
+    box-sizing: border-box;
+}
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --white: #ffffff;
+    }
+
+body {
+    background-color: #e6eff6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.pgreen {
+    color: var(--bright-yellow);
+    font-weight: bold;
+}
+
+h1 {
+    color: #3caaa9;
+}
+
+#gain {
+    font-weight: 200;
+}
+
+.xlg-text {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.lg-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+  
+.mid-text {
+    font-size: 1rem;
+    font-weight: 400;
+}
+  
+.sm-text {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'box1 box1'
+    'box2 box3';
+
+}
+
+.container .item:nth-child(1) {
+    grid-area: box1;
+    padding: 2rem;
+    background-color: white;
+    text-align: left;
+}
+
+#gain {
+    color: #9096a2;
+    font-weight: 300;
+}
+
+.container .item:nth-child(2) {
+    grid-area: box2;
+    padding: 2rem;
+    background-color:#3caaa9;
+    background-color:  ;
+    text-align: left;
+    color: white;
+}
+
+.container .item:nth-child(3) {
+    grid-area: box3;
+    padding: 2rem;
+    background-color: #4abebd;
+    text-align: left;
+    color: white;
+}
+
+.button {
+    background-color: var(--bright-yellow);
+    padding: 1rem 5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#why {
+    line-height: 2fr;
+}
+
