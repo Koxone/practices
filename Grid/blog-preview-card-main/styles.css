@@ -1,0 +1,105 @@
+* {
+    font-family: 'Figtree';
+    box-sizing: border-box;
+}
+
+
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --gray-500: hsl(0, 0%, 42%);
+    --gray-950: hsl(0, 0%, 7%);
+}  
+
+body {
+    display: grid; /* Establece el body como un contenedor grid */
+    place-content: center; /* Centra todo el contenido del body (en este caso, .main-container) horizontal y verticalmente */
+    margin: 0; /* Elimina márgenes predeterminados del navegador */
+    height: 100vh; /* Asegura que el body ocupe toda la altura del viewport */
+}
+
+.main-container {
+    display: grid; /* Establece el .main-container como un contenedor grid */
+    background-color: var(--yellow); /* Aplica el color de fondo amarillo */
+    width: 1200px; /* Define un ancho fijo para el contenedor */
+    height: 800px; /* Define una altura fija para el contenedor */
+    place-items: center; /* Centra el contenido dentro del .main-container (en este caso, .container) horizontal y verticalmente */
+}
+
+.container {
+    display: grid; /* Establece el .container como un contenedor grid */
+    grid-template-areas: 
+    'box1'
+    'box2'
+    'box3'; /* Define las áreas de grid para organizar elementos internos (opcional en este caso) */
+    width: 320px; /* Define un ancho fijo para el contenedor hijo */
+    height: 430px; /* Define una altura fija para el contenedor hijo */
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 5px;
+    background-color: var(--white);
+    place-items: center;
+}
+
+.lg-img {
+    width: 280px;
+    height: 170px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.title {
+    font-size: 10px;
+    font-weight: 800;
+    background-color: var(--yellow);
+    padding: 5px;
+    border-radius: 5px;
+    line-height: ;
+}
+
+.lg-text {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 2;
+}
+
+.mid-text {
+    font-size: 13px;
+    opacity: 60%;
+}
+
+.sm-text {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 2;
+
+}
+
+.name {
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 3;
+}
+
+.text {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.img-avatar {
+    border-radius: 50%;
+    height: 30px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    display: flex;
+    align-items: left;
+    gap: 7px;
+    grid-area: box3;
+    justify-self: left;
+}
+
+
+
+
