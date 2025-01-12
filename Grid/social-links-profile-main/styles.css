@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+}
+
+
+
+body {
+  display: grid;
+  place-content: center;
+  margin: 0;
+  height: 100vh;
+}
+
+.main-container {
+  display: grid;
+  background-color: black;
+  width: 1200px;
+  height: 800px;
+  place-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+  'box1'
+  'box2'
+  'box3';
+  grid-template-rows: 100px 100px 1fr; /*Esto logro que box1 cambiara de tama;o*/
+  width: 350px;
+  height: 550px;
+  border-radius: 10px;
+  background-color: var(--grey-800);
+  place-items: center;
+}
+
+
+img { 
+    grid-area: box1;
+    max-width: 100%;
+    display: block;
+    border-radius: 50%;
+    width: 80px;
+    margin-top: 20px;
+}
+
+  .lg-text {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 5px;
+  }
+
+  .mid-text {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--green);
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .sm-text {
+    font-size: 11px;
+    font-weight: 400;
+    color: white;
+  }
+
+.text {
+  grid-area: box2;
+  text-align: center;
+  align-self: start;
+
+}
+
+button {
+  grid-area: box3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 45px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: var(--grey-700);
+  border: solid var(--grey-700);
+}
+
+button:hover {
+  background-color: var(--grey-900);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
