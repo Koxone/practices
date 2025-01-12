@@ -1,0 +1,146 @@
+* {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary */
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Neutral */
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+    background-color: #edf2f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        'box1 box1 box2 box3'
+        'box4 box5 box5 box3';
+    gap: 25px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.container .item {
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para posicionar las citas relativas a este contenedor */
+}
+
+.container .item:nth-child(1) {
+    grid-area: box1;
+    background-color: var(--moderate-violet);
+    color: white;
+}
+
+.container .item:nth-child(2) {
+    grid-area: box2;
+    background-color: var(--very-dark-grayish-blue);
+    color: white;
+}
+
+.container .item:nth-child(3) {
+    grid-area: box3;
+    background-color: white;
+}
+
+.container .item:nth-child(4) {
+    grid-area: box4;
+    background-color: white;
+}
+
+.container .item:nth-child(5) {
+    grid-area: box5;
+    background-color: var(--very-dark-blackish-blue);
+    color: white;
+}
+
+img:not(.quote) {
+    border-radius: 50%;
+    width: 50px;
+    object-fit: cover;
+    box-shadow: 0 0 2px 2px #9b6dd9;
+}
+
+.quote {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    z-index: 0;
+    width: 120px;
+}
+
+.person-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+}
+
+.name-and-title {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    gap: 4px;
+}
+
+.title {
+    opacity: 50%;
+}
+
+.sub {
+    font-weight: bold;
+    font-size: 1.2rem;
+    z-index: 1;
+    position: relative;
+}
+
+.text {
+    opacity: 50%;
+    font-size: 11px;
+    text-align: justify;
+    padding: 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas: 
+            'box1'
+            'box2'
+            'box3'
+            'box4'
+            'box5';
+        grid-template-columns: 1fr;
+    }
+
+    .quote {
+        top: 20px;
+        right: 50px;
+    }
+
+    img:not(.quote) {
+        width: 40px;
+    }
+
+    .sub {
+        font-size: 1.2rem;
+    }
+
+    .text {
+        font-size: 12px;
+    }
+}

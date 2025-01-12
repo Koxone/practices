@@ -1,0 +1,76 @@
+* {
+    font-family: 'Outfit';
+    box-sizing: border-box;
+
+}
+
+:root {
+--white: hsl(0, 0%, 100%);
+
+--slate-300: hsl(212, 45%, 89%);
+--slate-500: hsl(216, 15%, 48%);
+--slate-900: hsl(218, 44%, 22%);
+}
+
+body {
+    display: grid;
+    place-content: center;
+    margin: 0;
+    height: 100vh;
+    background-color: #d5e1ef;/*El colo de fondo va en body, si se pone en * entra tambien al texto*/
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'box1'
+    'box2';
+    height:450px;
+    width: 290px;
+    background-color: var(--white);
+    padding: 15px; /*Este padding controla el padding de cada celda y sus elementos*/
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+/*En este caso, se esta usando Grid para el body, container e im, nada de Flex*/
+img {
+    grid-area: box1;
+    justify-self: center;/*esto hace que se posicione en el centro de su celda manteniendose centrado*/
+    width: 100%; /*Usa el 100% del area en la celda asignada*/
+    border-radius: 5px;
+}
+
+.text {
+    text-align: center;
+    
+}
+
+.lg-text {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.4;
+    display: grid;
+    place-items: center;
+    margin-bottom: 10px;
+
+}
+
+.sm-text {
+    font-weight: 300;
+    opacity: 70%;
+    font-size: 12px;
+    line-height: 1;
+    text-align: ;
+
+
+}
+
+.abajo {
+    grid-area: box2;
+    font-size: 13px;
+
+}
