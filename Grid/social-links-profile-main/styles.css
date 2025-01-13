@@ -42,7 +42,6 @@ body {
   place-items: center;
 }
 
-
 img { 
     grid-area: box1;
     max-width: 100%;
