@@ -1,0 +1,55 @@
+
+  
+
+    
+  
+    /* Ajustar .title */
+    .title {
+        grid-area: box2;
+      font-size: 0.8rem; /* Tamaño de texto más visible en este espacio */
+      margin: 1rem 0 0 1rem; /* Espaciado lateral */
+      letter-spacing: 0.2rem; /* Ajusta el espaciado entre letras */
+    }
+  
+    /* Ajustar .header */
+    .product-desktop {
+        display: block;
+        grid-area: box1;
+        width: 300px;
+    }
+
+    .header {
+        grid-area: box3;
+      font-size: 1.8rem; /* Tamaño del texto principal */
+      padding: 0 1rem; /* Padding reducido para adaptarse al nuevo tamaño */
+      line-height: 1.3; /* Mejora la legibilidad */
+    }
+  
+    /* Ajustar .text */
+    .text {
+        grid-area: box4;
+      font-size: 0.9rem; /* Tamaño de texto adaptado */
+      padding: 0 1rem; /* Padding lateral consistente */
+      line-height: 1.5; /* Espaciado entre líneas */
+    }
+  
+    /* Ajustar .price */
+    .price {
+        grid-area: box5;
+      font-size: 1.8rem; /* Ajuste proporcional */
+      padding: 0 0 0 1rem; /* Espaciado consistente */
+    }
+  
+    /* Ajustar botón */
+    .button {
+        grid-area: box6;
+      width: 80%; /* Botón más pequeño pero legible */
+      height: 2.5rem; /* Ajuste proporcional al nuevo diseño */
+      font-size: 0.9rem; /* Tamaño del texto en el botón */
+      margin: 1rem auto; /* Centrado con márgenes */
+    }
+  }
+  
+
+
+
