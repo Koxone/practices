@@ -1,1 +1,0 @@
-## I cant really give feedback of this since im just learning as i go. I worked on every part of the code as i was writing it.
