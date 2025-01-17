@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  font-family: 'Red Hat Display';
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cyan */
+  --cyan-600: #4d96a9;
+  --cyan-300: #8fe3f9;
+
+  /* Purple */
+  --purple-600: #855fb1;
+  --purple-300: #d9b8ff;
+
+  /* Slate */
+  --slate-900: #28283d;
+  --slate-600: #87879d;
+  --slate-300: #d1d1df;
+
+  /* White */
+  --white: #fafafa;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+
+}
+
+.main-container {
+  display: grid;
+  grid-template-areas: 
+  'a1'
+  'a2'
+  'a3';
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  height: 100%;
+  border: 1px solid rgb(68, 204, 41);
+}
+/*---------------------------------------------------------------*/
+.container-one {
+  grid-area: a1;
+  display: grid;
+  grid-template-areas: 
+  'b1'
+  'b2'
+  'b3'
+  'b4';
+  border: 1px solid rgb(255, 157, 10);
+  position: relative;
+}
+
+img {
+  width: 100%; /*borrar*/
+  object-fit: cover;
+  display: block;
+}
+
+.main-container .container-one .meet {
+  display: grid;
+  grid-area: b1;
+  width: 118px;
+  height: 28px;
+  justify-self: center;
+  margin-top: 48px;
+}
+
+.heroes {
+  display: grid;
+  grid-area: b2;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-areas: 
+  'heroe1 heroe2';
+  margin-top: 64px;
+  position: relative;
+  overflow: hidden;
+  gap: 1rem;
+}
+
+.heroes .heroe1 {
+  display: grid;
+  grid-area: heroe1;
+  justify-self: right;
+}
+
+.heroes .heroe2 {
+  display: grid;
+  grid-area: heroe2;
+  justify-self: left;
+}
+
+.heroes img {
+  width: 120%; /* Aumenta el tamaño de la imagen más allá del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Ajusta el contenido dentro del tamaño modificado */
+  gap: 300px;
+}
+
+.text-b1 {
+  display: grid;
+  grid-area: b3;
+  text-align: center;
+}
+
+.xlg-text {
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: 0px;
+  font-weight: 900;
+  text-align: center;
+  margin: 48px 32px 24px 32px;
+  color: var(--slate-900);
+}
+
+.lg-font {
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: 4px;
+  font-weight: 900;
+}
+
+.mid-text {
+  font-size: 12px;
+  line-height: 110%;
+  letter-spacing: 4px;
+  font-weight: 900;
+  color: var(--cyan-600);
+}
+
+.sm-text {
+  font-size: 18px;
+  line-height: 110%;
+  letter-spacing: 0px;
+  font-weight: 150;
+  margin: 0px 32px 0 32px;
+}
+
+.buttons1 {
+  display: flex;
+  grid-area: b4;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.buttons1 .button1 {
+  display: flex;
+  width: 193px;
+  height: 56px;
+  border-radius: 29px;
+  padding: 16px 40px 16px 40px;
+  font-size: 16px;
+  letter-spacing: 150;
+  font-weight: 800;
+  border: solid var(--cyan-600);
+  color: white;
+  background-color: var(--cyan-600);
+  align-self: center;
+  justify-self: center;
+  cursor: pointer;
+
+}
+
+.buttons1 .button2 {
+  display: flex;
+  width: 165px;
+  height: 56px;
+  border-radius: 29px;
+  padding: 16px 40px 16px 40px;
+  font-size: 16px;
+  letter-spacing: 150;
+  font-weight: 800;
+  border: solid var(--purple-600);
+  color: white;
+  background-color: var(--purple-600);
+  align-self: center;
+  justify-self: center;
+  cursor: pointer;
+}
+
+.buttons1 .button1:hover {
+  background-color: #71C0D4;
+}
+
+.buttons1 .button2:hover {
+  background-color: var(--purple-300);
+}
+
+.version {
+  color: var(--cyan-300);
+  margin-left: 5px;
+}
+
+
+/*-------------------------------------------------------*/
+.container-two {
+  display: grid;
+  grid-area: a2;
+  grid-template-areas: 
+  'c1'
+  'c2'
+  'c3';
+  border: 5px solid rgb(235, 10, 255);
+}
+
+.number1 {
+  display: grid;
+  grid-area: c1;
+}
+
+.mosaic {
+  display: grid;
+  grid-area: c2;
+  grid-template-areas: 
+  'd1 d2'
+  'd3 d4';
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.text-c3 {
+  display: grid;
+  grid-area: c3;
+}
+/*----------------------------------------------------*/
+
+.container-three {
+  display: grid;
+  grid-area: a3;
+  grid-template-areas: 
+  'e1'
+  'e2'
+  'e3';
+  border: 5px solid rgb(10, 104, 255);
+  position: relative; /*Controlar el z-index para footer*/
+}
+
+.number2 {
+  display: grid;
+  grid-area: e1;
+}
+
+.text-e2 {
+  display: grid;
+  grid-area: e2;
+}
+
+.buttons2 {
+  display: grid;
+  grid-area: e3;
+}
+
+.img-footer {
+  grid-area: e2; /* Empieza en e2 */
+  z-index: -1; /* Envía la imagen al fondo */
+  width: 100%;
+  height: auto; /* Ajusta el tamaño según necesites */
+  grid-row: 2 / 4; /* Ocupa desde e2 hasta e3 */
+}
+
+.text-e2, .buttons2 {
+  z-index: 1; /* Asegúrate de que el contenido esté encima */
+}
+
+.container-one,
+.container-two,
+.container-three {
+  display: grid;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: auto; /* Se ajusta al contenido inicialmente */
+}
+
+/*---------------------------------------------------------------*/
+
+
+
