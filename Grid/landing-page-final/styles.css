@@ -2,10 +2,11 @@
   font-family: 'Red Hat Display';
   box-sizing: border-box;
   margin: 0;
+  
 }
 
 :root {
-  /* Cyan */
+  /* Cy an */
   --cyan-600: #4d96a9;
   --cyan-300: #8fe3f9;
 
