@@ -1,0 +1,544 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.sm-text {
+  font-family: 'IBM Plex Sans';
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #191826;
+}
+
+.lg-text {
+  font-family: 'IBM Plex Sans';
+  font-size: 40px;
+  line-height: 100%;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #191826;
+}
+
+.xlg-text {
+  font-family: 'IBM Plex Sans';
+  font-size: 40px;
+  line-height: 110%;
+  font-weight: 700;
+  letter-spacing: 0px;
+  color: #191826;
+}
+
+a {
+  cursor: pointer;
+  display: flex;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  display: grid;
+  grid-template-areas:
+    'm1'
+    'm2'
+    'm3';
+  width: 100%;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 100%;
+  min-width: 23.4375rem;
+}
+
+.container-landing {
+  /*Primer Contenedor*/
+  display: grid;
+  grid-area: m1;
+  grid-template-areas:
+    'a1'
+    'a2';
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.content-landing {
+  grid-area: a2;
+}
+
+.logo-landing {
+  grid-area: a1;
+  align-self: flex-start;
+  margin: 64px 0px 64px 20px;
+}
+
+.text-landing {
+  margin: 0px 20px 64px 20px;
+}
+
+.text-landing .lg-text {
+  margin-bottom: 40px;
+}
+
+.container-content {
+  /*Segundo Contenedor*/
+  grid-area: m2;
+  display: grid;
+  grid-template-areas:
+    'b1'
+    'b2';
+  grid-template-rows: 30.625rem 39.0625rem;
+  grid-template-columns: 100%;
+  width: 100%;
+}
+
+.phone-background-content {
+  grid-area: b1;
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+
+#phone {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  width: 208.972px;
+  height: 430px;
+  z-index: 2;
+}
+
+.background-container {
+  grid-column: 1; /* Mantiene el posicionamiento dentro del grid */
+  grid-row: 1;
+  display: flex; /* Centra la imagen internamente */
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 29.25rem;
+  object-fit: contain;
+  padding: 0 1.25rem 0 1.25rem;
+  margin-top: 6.875rem;
+  background-color: #191826;
+}
+
+.text-content {
+  grid-area: b2;
+  padding: 48px 20px 0px 20px;
+  width: 100%;
+  background-color: #fa7453;
+}
+
+.text-content .xlg-text {
+  margin-bottom: 24px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  height: auto;
+}
+
+.text-content .price {
+  font-size: 64px;
+  line-height: 110%;
+  letter-spacing: 0px;
+  font-family: 'IBM Plex Sans';
+  font-weight: 900;
+}
+
+.text-content .month {
+  font-size: 20px;
+  line-height: 150px;
+  font-family: 'IBM Plex Sans';
+  font-weight: 400;
+}
+
+.buttons-content {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 111px;
+}
+
+#ios {
+  padding: 16px 95px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 180%;
+  white-space: nowrap;
+  border: solid #191826;
+  color: white;
+  background-color: #191826;
+}
+
+#ios:hover {
+  background-color: cyan;
+  border: solid cyan;
+  color: black;
+  cursor: pointer;
+}
+
+#android {
+  padding: 16px 76.6496px;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 180%;
+  border: solid white;
+  background-color: white;
+  border-radius: 12px;
+}
+
+#android:hover {
+  background-color: yellow;
+  border: solid yellow;
+  color: black;
+  cursor: pointer;
+}
+
+footer {
+  /*Tercer Contenedor*/
+}
+
+.content-footer {
+  margin: 64px 20px 80px 20px;
+}
+
+.content-footer .logo {
+  margin-bottom: 32px;
+}
+
+.content-footer .sm-text {
+  margin-bottom: 32px;
+}
+
+.content-footer .icons-footer {
+  gap: 32px;
+  display: flex;
+  flex-direction: row;
+}
+
+.content-footer .icons-footer #facebook:hover {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(90%) saturate(400%)
+    hue-rotate(-20deg) brightness(105%) contrast(100%);
+}
+
+.content-footer .icons-footer #instagram:hover {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(90%) saturate(400%)
+    hue-rotate(-20deg) brightness(105%) contrast(100%);
+}
+
+.content-footer .icons-footer #twitter:hover {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(90%) saturate(400%)
+    hue-rotate(-20deg) brightness(105%) contrast(100%);
+}
+
+#mail {
+  display: block;
+}
+
+.corner {
+  display: none;
+}
+/*------------------------------------------TABLET----------------------------*/
+@media (min-width: 48rem) and (max-width: 89.9375rem) {
+  .container-landing {
+    grid-template-areas:
+      'a1'
+      'a2';
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: auto auto;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .corner {
+    display: block;
+    position: absolute;
+    right: -4.0625rem;
+    top: 25px;
+    margin-top: -6.25rem;
+  }
+  .text-landing {
+    width: 42.5rem;
+    height: 21.25rem;
+  }
+
+  .text-landing .lg-text {
+    font-size: 4rem;
+    width: 26rem;
+  }
+
+  .content-landing .sm-text {
+    font-size: 1.125rem;
+    width: 31.5rem;
+    height: 6.75rem;
+  }
+
+  .container-content {
+    /*Segundo Contenedor*/
+    grid-template-areas: 'b1';
+    grid-template-rows: 62.5rem;
+    grid-template-columns: 100%;
+    width: 100%;
+    height: 62.5rem;
+    position: relative;
+  }
+
+  .phone-background-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .background-container {
+    position: absolute;
+    background-color: #191826;
+    width: calc(100% - 5.5rem); /* Resta 2.75rem de cada lado */
+    height: 37.5rem; /* O cualquier altura que necesites */
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    border-radius: 0.75rem;
+    margin: 0 2.75rem;
+    padding: 0;
+    max-width: 70rem;
+  }
+
+  /* Imagen principal del teléfono */
+  #background-phone {
+    position: absolute;
+    width: 19.5rem; /* Tamaño de la imagen */
+    height: 29.25rem; /* Mantiene la proporción */
+    margin-left: 0rem;
+  }
+
+  #phone {
+    position: absolute;
+    top: 36%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 16.8881rem;
+    height: 34.75rem;
+    z-index: 2;
+  }
+
+  .text-content {
+    position: absolute;
+    top: 54%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    width: 22.25rem;
+    height: 39.25rem;
+    padding: 32px;
+    background-color: #fa7453;
+    border-radius: 1rem;
+    z-index: 3;
+    margin: 3rem 3rem 0 3rem;
+  }
+
+  .text-content .xlg-text {
+    margin-bottom: 2.5rem;
+  }
+
+  .text-content .sm-text {
+    font-size: 1.125rem;
+    line-height: 150%;
+    width: 16.25rem;
+    height: 10.125rem;
+  }
+
+  #ios {
+    padding: 1rem 3.6225rem;
+  }
+
+  #android {
+    padding: 1rem 2.4469rem;
+  }
+
+  .container-footer {
+    height: 17.5625rem;
+  }
+
+  .content-footer {
+    display: grid;
+    margin: 4rem 2.5rem 5rem 2.5rem;
+  }
+
+  .container-footer .icons-footer {
+    justify-self: right;
+    margin-top: -6.25rem;
+    width: 7.75rem;
+    height: 1.25rem;
+  }
+
+  .container-footer .sm-text {
+    width: 35.25rem;
+  }
+}
+/*------------------------------------------DESKTOP----------------------------*/
+
+@media (min-width: 90rem) and (max-width: 160rem) {
+  .container-landing {
+    grid-template-areas:
+      'a1'
+      'a2';
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: auto auto;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .corner {
+    display: block;
+    position: absolute;
+    right: -4.0625rem;
+    top: 25px;
+    margin-top: -6.25rem;
+  }
+  .text-landing {
+    width: 70rem; /**/
+    height: 19.125rem; /**/
+  }
+
+  .text-landing .lg-text {
+    font-size: 5.5rem; /**/
+    width: 58rem; /**/
+    height: 11rem; /**/
+  }
+
+  #salto {
+    display: block; /**/
+  }
+
+  .content-landing .sm-text {
+    font-size: 1.25rem; /**/
+    width: 46rem; /**/
+    height: 5.625rem; /**/
+  }
+
+  .container-content {
+    /*Segundo Contenedor*/
+    grid-template-areas: 'b1';
+    grid-template-rows: 62.5rem;
+    grid-template-columns: 100%;
+    width: 100%;
+    height: 62.5rem;
+    position: relative;
+  }
+
+  .phone-background-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .background-container {
+    position: absolute;
+    background-color: #191826;
+    width: calc(100% - 5.5rem); /* Resta 2.75rem de cada lado */
+    height: 37.5rem; /* O cualquier altura que necesites */
+    display: flex;
+    justify-content: center; /**/
+    align-items: start;
+    border-radius: 0.75rem;
+    margin: 0 2.75rem;
+    padding: 0;
+    max-width: 70rem; /**/
+  }
+
+  /* Imagen principal del teléfono */
+  #background-phone {
+    position: absolute;
+    left: 34%; /**/
+    width: 19.5rem; /* Tamaño de la imagen */
+    height: 29.25rem; /* Mantiene la proporción */
+    margin-left: 0rem;
+  }
+
+  #phone {
+    position: absolute;
+    top: 36%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 19.5rem; /**/
+    height: 40.125rem;
+    z-index: 2;
+  }
+
+  .text-content {
+    position: absolute;
+    top: 60%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    width: 32rem; /**/
+    height: 39.5rem; /**/
+    padding: 32px;
+    background-color: #fa7453;
+    border-radius: 1rem;
+    z-index: 3;
+  }
+
+  .text-content .xlg-text {
+    margin-bottom: 2.5rem;
+  }
+
+  .text-content .sm-text {
+    font-size: 1.25rem; /**/
+    line-height: 150%; /**/
+    width: 25rem; /**/
+    height: 9.375rem; /**/
+  }
+
+  .buttons-content {
+    margin-bottom: 0; /**/
+  }
+
+  #ios {
+    padding: 1rem 7.9975rem; /**/
+  }
+
+  #android {
+    padding: 1rem 6.8219rem; /**/
+  }
+
+  .container-footer {
+    height: 13.5625rem; /**/
+  }
+
+  .content-footer {
+    width: 70rem; /**/
+    height: 4.5625rem; /**/
+    margin: 4rem 10rem 5rem 10rem; /**/
+  }
+
+  .container-footer .icons-footer {
+    justify-self: right;
+    margin-top: -9.375rem; /**/
+    width: 7.75rem; /**/
+    height: 1.25rem; /**/
+  }
+
+  .container-footer .sm-text {
+    position: relative; /**/
+    width: 35.25rem; /**/
+    left: 27rem; /**/
+    bottom: 5rem; /**/
+  }
+}
