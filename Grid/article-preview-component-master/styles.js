@@ -1,7 +1,7 @@
-var share_button = document.querySelector('.button-share-inactive'); // Contenedor del botón
-var toggle_button = document.querySelector('.toggle-button'); // Contenedor con los iconos
-var share_icon = share_button.querySelector('.svg-share'); // Ícono de compartir
-var back = document.querySelector('.back');
+let share_button = document.querySelector('.button-share-inactive'); // Contenedor del botón
+let toggle_button = document.querySelector('.toggle-button'); // Contenedor con los iconos
+let share_icon = share_button.querySelector('.svg-share'); // Ícono de compartir
+let back = document.querySelector('.back');
 
 share_button.addEventListener('click', function () {
     if (toggle_button.classList.contains('active')) { 
