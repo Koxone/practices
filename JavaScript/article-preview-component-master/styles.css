@@ -1,0 +1,421 @@
+/* Variables en CSS */
+:root {
+    /* Colores - Gris */
+    --color-grey-900: #48556A;
+    --color-grey-500: #6e8098;
+    --color-grey-400: #9DAEC2;
+    --color-grey-200: #ECF2F8;
+    
+    /* Espaciado */
+    --spacing-0: 0rem;
+    --spacing-200: 1rem;
+    --spacing-300: 1.5rem;
+    --spacing-400: 2rem;
+    --spacing-500: 2.5rem;
+    --spacing-600: 3rem;
+    --spacing-700: 3.5rem;
+    --spacing-800: 4rem;
+    --spacing-1300: 6.5rem;
+    --spacing-2000: 10rem;
+}
+
+* {
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope';
+}
+
+.sm-text {
+    font-size: 0.8125rem;
+    line-height: 140%;
+    letter-spacing: 0.001rem;
+    font-weight: 500;
+    text-align: left;
+    color: var(--color-grey-500);
+}
+
+.lg-text {
+    font-size: 1.25rem;
+    line-height: 130%;
+    letter-spacing: 0.0031rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    color: var(--color-grey-900);
+}
+
+.text-avatar {
+    font-size: 0.8125rem;
+    line-height: 140%;
+    letter-spacing: 0.001rem;
+    font-weight: 700;
+    color: var(--color-grey-900);
+}
+
+.date {
+    font-size: 0.8125rem;
+    line-height: 140%;
+    letter-spacing: 0.001rem;
+    font-weight: 500;
+    color: var(--color-grey-400);
+}
+
+#image-landing {
+    width: 20.4375rem;
+    height: 12.5rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Evita desplazamientos laterales */
+    background-color: var(--color-grey-500);
+}
+
+.main-container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.container-landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 20.4375rem;
+    max-width: 20.4375rem;
+    height: 33.625rem;
+    max-height: 33.625rem;
+    border-radius: 0.75rem;
+    background-color: white;
+}
+
+.text-landing {
+    width: 16.6875rem;
+    height: 12.5rem;
+    margin: 0rem 0rem 0rem 0rem;
+}
+/*------------------------------------------------CSS para Javascript------------------------*/
+
+
+.container-footer { /*Contenedor Relativo para el Javascript*/ 
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.avatar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0rem 1.875rem 1.125rem 1.875rem ;
+}
+
+.michelle {
+    display: flex;
+}
+
+#michelle {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+#button-share-active {
+    display: none;
+}
+
+.button-share-inactive {
+    display: flex;
+    margin-left: auto;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #ECF2F8;
+}
+
+.back.prueba2 {
+    position: relative;
+    z-index: 9;
+    background-color: #6E8098;
+    border-radius: 50%;
+}
+
+.svg-share.prueba {
+    position: relative;
+    
+    filter: brightness(1000%);
+}
+
+ .svg-share {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5625rem 0.5rem 0.625rem 0.5625rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+}
+
+.toggle-button.active {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    top: -2.3125rem;
+    left: -0.0625rem;
+    width: 20.5625rem;
+    height: 4.75rem;
+    transition: all .3s ease;
+    transform: translateY(1.25rem); /* Se mueve suavemente hacia abajo */
+    border-radius: 0 0 0.75rem 0.75rem;
+    background-color: var(--color-grey-900);
+    border: solid var(--color-grey-900);
+}
+
+.toggle-button.exit {
+    opacity: 0;
+    transform: translateY(-1.25rem); /* Se mueve suavemente hacia arriba */
+    transition: all 0.3s ease;
+}
+
+.share {
+    margin-left: 1.875rem;
+    margin-right: 1.5rem;
+}
+
+.icons {
+    display: flex;
+    width: 5.75rem;
+    height: 1.25rem;
+    gap: 1rem;
+}
+
+.toggle-button.active .button-share-inactive {
+    display: none;
+}
+
+.toggle-button.active .sm {
+    visibility: visible;
+    transition-delay: 0.3s;
+}
+
+.toggle-button .sm {
+    visibility: hidden;
+} 
+
+.toggle-button.active #button-share-active {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-top: -5rem;
+    margin-left: auto;
+}
+
+.toggle-button.active #button-share-active {
+    margin-top: 0rem;
+    transform: rotate(180deg); 
+    transition: .3s ease;
+}
+
+.toggle-button.active #button-share-active {
+    margin-top: 0rem;
+    transform: rotate(180deg); 
+    transition: .3s ease;
+}
+
+/* Estado inicial (cuando toggle-button NO tiene la clase active) */
+.toggle-button:not(.active) #button-share {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease;
+}
+
+.share {
+    font-size: 0.8125rem;
+    line-height: 140%;
+    letter-spacing: 0.2031rem;
+    font-weight: 500;
+    color: var(--color-grey-200);
+}
+
+.toggle-button a {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/*--------------------------------------TABLET-------------------------------------------*/
+
+@media (min-width: 48rem) and (max-width: 63.9375rem) {
+
+    .container-landing {
+        display: grid;
+        grid-template-areas: 
+        'drawer text'
+        'drawer footer';
+        grid-template-columns: 14.3125rem auto;
+        grid-template-rows: repeat(2, auto);
+        justify-content: unset;
+        width: 38rem;
+        height: 21.625rem;
+        max-width: 38rem;
+        max-height: 21.625rem;
+    }
+
+    #image-landing {
+        grid-area: drawer;
+        width: 14.3125rem;
+        height: 21.625rem;
+        border-radius: 0.75rem 0 0rem 0.75rem;
+    }
+
+    .text-landing {
+        grid-area: text;
+        margin: 2.5625rem 2.25rem 1.5rem 2rem;
+        width: 19.4375rem;
+        height: 12.5rem;
+    }
+
+    .container-footer {
+        position: static;
+        grid-area: footer;
+    }
+
+    .button-share-inactive {
+        position: relative;
+        background-color: #ECF2F8;
+    }
+
+    .svg-share.prueba {
+        filter: unset;
+        background-color: unset;
+    }
+
+    .toggle-button.active {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        top: -5.5rem;
+        left: -6.75rem;
+        width: 15.5rem;
+        height: 3.4375rem;
+        transition: all .3s ease;
+        transform: translateY(1.25rem); /* Se mueve suavemente hacia abajo */
+        border-radius: 0.625rem;
+        opacity: 95%;
+        background-color: var(--color-grey-900);
+        border: solid var(--color-grey-900);
+    }
+
+    .toggle-button.active::after {
+        content: "";
+        position: absolute;
+        bottom: -0.625rem; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 0.625rem solid transparent;  /* Lado izquierdo del triangulo */
+        border-right: 0.625rem solid transparent; /* Lado derecho del triangulo */
+        border-top: 0.625rem solid var(--color-grey-900); /* Color del triangulo */
+    }
+    
+  }
+/*-------------------------------------------Desktop-----------------------------------------------------*/
+
+@media (min-width: 64rem) and (max-width: 160.3125rem) {
+    .container-landing {
+        display: grid;
+        grid-template-areas: 
+        'drawer text'
+        'drawer footer';
+        grid-template-columns: 17.8125rem auto;
+        grid-template-rows: repeat(2, auto);
+        justify-content: unset;
+        width: 45.625rem;
+        height: 17.5rem;
+        min-width: 45.625rem;
+        max-width: 45.625rem;
+        max-height: 17.5rem;
+        min-height: 17.5rem;
+    }
+
+    #image-landing {
+        grid-area: drawer;
+        width: 17.8125rem;
+        height: 17.5rem;
+        border-radius: 0.75rem 0 0rem 0.75rem;
+    }
+
+    .text-landing {
+        grid-area: text;
+        margin: 1.875rem 2.5rem 1.5rem 2.5rem;
+        width: 22.8125rem;
+        height: 9.75rem;
+    }
+
+    .container-footer {
+        position: static;
+        grid-area: footer;
+    }
+
+    .avatar {
+        padding: 0rem 2.5rem 1.875rem 2.5rem ;
+    }
+
+    .button-share-inactive {
+        position: relative;
+        background-color: #ECF2F8;
+    }
+
+    .svg-share.prueba {
+        filter: unset;
+        background-color: unset;
+    }
+
+
+    .toggle-button.active {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        top: -6.5625rem;
+        left: -6.75rem;
+        width: 15.5rem;
+        height: 3.4375rem;
+        transition: all .3s ease;
+        transform: translateY(1.25rem); /* Se mueve suavemente hacia abajo */
+        border-radius: 0.625rem;
+        opacity: 95%;
+        background-color: var(--color-grey-900);
+        border: solid var(--color-grey-900);
+    }
+
+    .toggle-button.active::after {
+        content: "";
+        position: absolute;
+        bottom: -0.625rem; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 0.625rem solid transparent;  /* Lado izquierdo del triangulo */
+        border-right: 0.625rem solid transparent; /* Lado derecho del triangulo */
+        border-top: 0.625rem solid var(--color-grey-900); /* Color del triangulo */
+    }
+}
+
+
+
+
+
